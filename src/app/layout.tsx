@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Clarity from "@microsoft/clarity";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GrowMat Academy - Rapid Instagram Growth & Conversion",
-  description: "Learn to grow your Instagram organically and convert followers into buyers with our proven system. 30 minutes daily for maximum results.",
+  description:
+    "Learn to grow your Instagram organically and convert followers into buyers with our proven system. 30 minutes daily for maximum results.",
 };
+
+const projectId = "sg60zo2vu5";
+Clarity.init(projectId);
 
 export default function RootLayout({
   children,
@@ -29,9 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
