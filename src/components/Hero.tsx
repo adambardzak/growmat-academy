@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white py-20 px-4 overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 pointer-events-none z-0 max-h-screen">
+      <div className="absolute rotate-180 inset-0 pointer-events-none z-0 max-h-screen">
         <Aurora
           colorStops={["#6D9B4B", "#3E1E68", "#6D9B4B"]}
           blend={0.5}
