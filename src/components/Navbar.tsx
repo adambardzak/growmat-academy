@@ -12,6 +12,7 @@ import {
   FaPlay,
   FaCheckCircle,
   FaGraduationCap,
+  FaCookie,
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -156,6 +157,14 @@ const Navbar = () => {
               <FaPlay className="text-sm" />
               <span>Podívej se na ukázku</span>
             </button>
+
+            <a
+              href="/cookie-settings"
+              className="w-full group bg-white/5 backdrop-blur-md border border-gray-600/30 text-gray-300 font-medium py-3 px-4 rounded-full transition-all duration-300 hover:bg-green-400/10 hover:text-green-400 hover:border-green-400/30 inline-flex items-center justify-center gap-2"
+            >
+              <FaCookie className="text-sm" />
+              <span>Nastavení cookies</span>
+            </a>
 
             <button className="w-full group bg-gradient-to-r from-green-400 to-green-600 text-black font-bold py-3 px-6 rounded-full transition-all duration-300 hover:from-green-500 hover:to-green-700 shadow-lg hover:shadow-green-400/50 inline-flex items-center justify-center gap-2">
               <FaRocket className="text-sm" />

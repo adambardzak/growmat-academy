@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ClarityInit from "@/components/ClarityInit";
 import StructuredData from "@/components/StructuredData";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +28,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://growmat-academy.com'),
+  metadataBase: new URL('https://growmatacademy.cz'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "GrowMat Academy - Raketový růst na Instagramu",
     description: "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky. Bez reklam, pouze 30 minut denně.",
-    url: 'https://growmat-academy.com',
+    url: 'https://growmatacademy.cz',
     siteName: 'GrowMat Academy',
     images: [
       {
@@ -89,6 +90,7 @@ export default function RootLayout({
         <StructuredData />
         <Navbar />
         <main className="pt-16">{children}</main>
+        <CookieBanner />
       </body>
     </html>
   );
