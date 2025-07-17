@@ -14,6 +14,8 @@ import {
   FaGraduationCap,
   FaCookie,
 } from "react-icons/fa";
+import Container from "./Container";
+import clsx from "clsx";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,9 +31,8 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { name: "Systém", href: "#system", icon: <FaRocket className="text-sm" /> },
     {
-      name: "Kurz",
+      name: "Co najdeš uvnitř?",
       href: "#course",
       icon: <FaGraduationCap className="text-sm" />,
     },
@@ -40,9 +41,8 @@ const Navbar = () => {
       href: "#results",
       icon: <FaCheckCircle className="text-sm" />,
     },
-    { name: "Ukázka", href: "#demo", icon: <FaPlay className="text-sm" /> },
     {
-      name: "Komunita",
+      name: "Recenze",
       href: "#community",
       icon: <FaUsers className="text-sm" />,
     },
@@ -53,26 +53,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-black/80 backdrop-blur-lg border-b border-green-400/20 shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-2 left-0 right-0 z-50 transition-all duration-300">
+      <Container
+        size="sm"
+        className={clsx(
+          isScrolled ? "rounded-2xl" : "rounded-t-2xl ",
+          "bg-black/70 backdrop-blur-lg border border-green-400/40 shadow-lg"
+        )}
+      >
         <div className="flex items-center justify-between h-16 ">
           {/* Logo */}
           <div className="flex items-center overflow-hidden">
-            {/* <div className="flex-shrink-0 flex items-center gap-3">
-              <div className="bg-gradient-to-r from-green-400 to-green-600 p-2 rounded-lg">
-                <FaInstagram className="text-black text-xl" />
-              </div>
-              <div>
-                <div className="text-white font-bold text-xl">GrowMat</div>
-                <div className="text-green-400 text-xs font-semibold">Academy</div>
-              </div>
-            </div> */}
             <Image
               src="/logo.png"
               alt="GrowMat Academy Logo"
@@ -128,7 +119,27 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
+      <Container
+        className={`bg-gradient-to-r from-green-400/20 to-green-600/10 border-b border-green-400/30 transition-all duration-300 ${
+          isScrolled
+            ? "h-0 opacity-0 overflow-hidden"
+            : "h-auto opacity-100 rounded-b-2xl"
+        }`}
+        size="sm"
+      >
+        <div className="flex items-center justify-center py-2 w-full">
+          <div className="flex items-center gap-2 text-green-300 text-sm font-medium">
+            <FaCheckCircle className="text-green-400" />
+            <span>
+              🔥 OMEZENÁ NABÍDKA: UZAMKNI SI AKČNÍ CENU 399 Kč JEŠTĚ DNES!
+            </span>
+            <button className="text-green-400 hover:text-green-300 underline ml-2 transition-colors duration-300">
+              Zjisti více
+            </button>
+          </div>
+        </div>
+      </Container>
 
       {/* Mobile menu */}
       <div
@@ -171,27 +182,6 @@ const Navbar = () => {
               <span>Začni růst už dnes</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Top announcement bar */}
-      <div
-        className={`bg-gradient-to-r from-green-400/20 to-green-600/10 border-b border-green-400/30 transition-all duration-300 ${
-          isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center py-2">
-            <div className="flex items-center gap-2 text-green-300 text-sm font-medium">
-              <FaCheckCircle className="text-green-400" />
-              <span>
-                🔥 OMEZENÁ NABÍDKA: UZAMKNI SI AKČNÍ CENU 399 Kč JEŠTĚ DNES!
-              </span>
-              <button className="text-green-400 hover:text-green-300 underline ml-2 transition-colors duration-300">
-                Zjisti více
-              </button>
-            </div>
           </div>
         </div>
       </div>

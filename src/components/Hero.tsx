@@ -10,7 +10,10 @@ import {
   FaArrowRight,
   FaUsers,
   FaFire,
+  FaStopwatch,
+  FaCheck,
 } from "react-icons/fa";
+import Aurora from "./Aurora";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -24,13 +27,16 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white py-20 px-4 overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-green-400/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-400/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-green-400/5 to-transparent rounded-full animate-pulse" />
+      <div className="absolute inset-0 pointer-events-none z-0 max-h-screen">
+        <Aurora
+          colorStops={["#6D9B4B", "#3E1E68", "#6D9B4B"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
       </div>
 
-      <div className="relative max-w-6xl mx-auto text-center z-10">
+      <div className="relative max-w-6xl mx-auto text-center z-10 pt-16 flex flex-col items-center justify-centers">
         <div className="mb-12">
           <div className="flex justify-center items-center gap-3 mb-6">
             <FaInstagram className="text-green-400 text-3xl" />
@@ -66,6 +72,10 @@ const Hero = () => {
                 BEZ dlouhého editování
               </span>
             </div>
+            <div className="flex items-center gap-2 bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
+              <FaStopwatch className="text-green-400" />
+              <span className="text-gray-300 text-sm">30 minut denně s AI</span>
+            </div>
           </div>
 
           {/* Main Selling Video */}
@@ -83,73 +93,47 @@ const Hero = () => {
                     Your browser does not support the video tag.
                   </video>
 
-                  {/* Video Stats Overlay */}
-                  <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
-                    <div className="flex items-center gap-2 text-green-400">
-                      <FaFire className="text-sm" />
-                      <span className="text-sm font-semibold">
-                        ŽIVĚ z akademie
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Video Duration */}
-                  <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-green-400 text-sm font-semibold">
-                      15:32
-                    </span>
-                  </div>
-
                   {/* Bottom overlay with key points */}
-                  <div className="absolute bottom-4 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 pointer-events-none">
-                    <div className="flex flex-wrap justify-center gap-4">
-                      <div className="bg-green-400/20 backdrop-blur-sm px-3 py-1 rounded-full border border-green-400/30">
-                        <span className="text-green-300 text-sm font-semibold">
-                          ✅ Kompletní systém
-                        </span>
-                      </div>
-                      <div className="bg-green-400/20 backdrop-blur-sm px-3 py-1 rounded-full border border-green-400/30">
-                        <span className="text-green-300 text-sm font-semibold">
-                          ✅ Skutečné výsledky
-                        </span>
-                      </div>
-                      <div className="bg-green-400/20 backdrop-blur-sm px-3 py-1 rounded-full border border-green-400/30">
-                        <span className="text-green-300 text-sm font-semibold">
-                          ✅ Bez reklam
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
               {/* Video Description */}
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">
-                  Zjisti, jak přesně funguje náš systém!
-                </h3>
-                <p className="text-gray-300 text-lg mb-4">
-                  V tomto videu ti ukážu celý proces od A do Z - jak za 30 minut
-                  denně
-                  <br />
-                  vytvářet virální obsah a proměnit followers na zákazníky.
-                </p>
-
                 {/* Video CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <button
                     onClick={handlePlayVideo}
                     className="group bg-gradient-to-r from-green-400 to-green-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 hover:from-green-500 hover:to-green-700 hover:scale-105 shadow-lg hover:shadow-green-400/50 inline-flex items-center gap-2"
                   >
-                    <FaPlay className="text-lg" />
-                    <span>Přehrát video</span>
+                    <FaCheck className="text-lg" />
+                    <span>Chci vědět víc!</span>
                   </button>
+                </div>
 
-                  <button className="group bg-white/10 backdrop-blur-md border border-green-400/30 text-green-400 font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:bg-green-400/20 hover:scale-105 shadow-lg inline-flex items-center gap-2">
-                    <FaUsers className="text-sm" />
-                    <span>Přeskočit na kurz</span>
-                    <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
+                {/* Social Proof Numbers */}
+                <div className="flex flex-wrap justify-center gap-8 mt-8">
+                  <div className="text-center">
+                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                      0→+90 000
+                    </h3>
+                    <p className="text-sm text-gray-400 mt-1">
+                      Získaných sledujících
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                      +1000%
+                    </h3>
+                    <p className="text-sm text-gray-400 mt-1">Nárůst dosahu</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                      +15 000 000
+                    </h3>
+                    <p className="text-sm text-gray-400 mt-1">
+                      Zhlédnutí Reels
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -221,113 +205,13 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Social Proof & Preview Section */}
-        {/* <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-              <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-8 rounded-2xl border border-green-400/30 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-4 text-green-400 flex items-center gap-2">
-                  <FaUsers className="text-xl" />
-                  Připoj se k 1000+ úspěšným členům
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Kteří už růst na Instagramu za posledních 30 dnů průměrně:
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-black/30 p-4 rounded-xl text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
-                      +15K
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      Nových followerů
-                    </div>
-                  </div>
-                  <div className="bg-black/30 p-4 rounded-xl text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
-                      +50K
-                    </div>
-                    <div className="text-sm text-gray-400">Zhlédnutí</div>
-                  </div>
-                  <div className="bg-black/30 p-4 rounded-xl text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
-                      +25
-                    </div>
-                    <div className="text-sm text-gray-400">Prodejů</div>
-                  </div>
-                  <div className="bg-black/30 p-4 rounded-xl text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
-                      98%
-                    </div>
-                    <div className="text-sm text-gray-400">Spokojenost</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-3 rounded-2xl border border-green-400/30">
-                <div className="relative bg-black/50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/api/placeholder/500/400"
-                    alt="Success Stories Preview"
-                    width={500}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <button className="group bg-green-400/90 hover:bg-green-400 text-black p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-green-400/50">
-                      <FaPlay className="text-2xl ml-1" />
-                    </button>
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-green-400 text-sm font-semibold">
-                      🔥 Živě z akademie
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-300 text-center mt-4">
-                Podívej se na výsledky našich členů
-              </p>
-            </div>
-          </div>
-        </div> */}
-
         {/* Multiple CTAs */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="gap-6 mt-12">
           <button className="group bg-gradient-to-r from-green-400 to-green-600 text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 hover:from-green-500 hover:to-green-700 hover:scale-105 shadow-lg hover:shadow-green-400/50 flex items-center justify-center gap-2">
             <FaFire className="text-xl" />
             <span>Začni růst už dnes!</span>
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
           </button>
-
-          <button className="group bg-transparent border-2 border-green-400 text-green-400 font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 hover:bg-green-400 hover:text-black hover:scale-105 shadow-lg hover:shadow-green-400/50 flex items-center justify-center gap-2">
-            <FaPlay className="text-sm" />
-            <span>Podívej se na demo</span>
-          </button>
-
-          <button className="group bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-            <FaUsers className="text-sm" />
-            <span>Přečti si recenze</span>
-          </button>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-8 bg-gray-800/50 backdrop-blur-sm px-8 py-4 rounded-full border border-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✅</span>
-              <span className="text-gray-300 text-sm">30denní záruka</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✅</span>
-              <span className="text-gray-300 text-sm">Bez dlouhých smluv</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✅</span>
-              <span className="text-gray-300 text-sm">Osobní podpora</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

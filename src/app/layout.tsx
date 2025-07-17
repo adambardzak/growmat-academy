@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ClarityInit from "@/components/ClarityInit";
 import StructuredData from "@/components/StructuredData";
 import CookieBanner from "@/components/CookieBanner";
+import Aurora from "@/components/Aurora";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GrowMat Academy - Raketový růst na Instagramu za 30 minut denně",
-  description: "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky s naším prověřeným systémem. Bez reklam, bez dlouhého editování. Pouze 30 minut denně pro maximální výsledky.",
-  keywords: ["Instagram růst", "organický růst", "Instagram marketing", "sociální média", "podnikání", "online kurz", "Instagram strategie", "prodej na Instagramu", "virální obsah"],
+  description:
+    "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky s naším prověřeným systémem. Bez reklam, bez dlouhého editování. Pouze 30 minut denně pro maximální výsledky.",
+  keywords: [
+    "Instagram růst",
+    "organický růst",
+    "Instagram marketing",
+    "sociální média",
+    "podnikání",
+    "online kurz",
+    "Instagram strategie",
+    "prodej na Instagramu",
+    "virální obsah",
+  ],
   authors: [{ name: "GrowMat Academy" }],
   creator: "GrowMat Academy",
   publisher: "GrowMat Academy",
@@ -28,31 +40,35 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://growmatacademy.cz'),
+  metadataBase: new URL("https://growmatacademy.cz"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "GrowMat Academy - Raketový růst na Instagramu",
-    description: "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky. Bez reklam, pouze 30 minut denně.",
-    url: 'https://growmatacademy.cz',
-    siteName: 'GrowMat Academy',
+    description:
+      "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky. Bez reklam, pouze 30 minut denně.",
+    url: "https://growmatacademy.cz",
+    siteName: "GrowMat Academy",
     images: [
       {
-        url: '/api/og?title=Raketový%20růst%20na%20Instagramu&description=Nauč%20se%20organicky%20růst%20za%2030%20minut%20denně',
+        url: "/api/og?title=Raketový%20růst%20na%20Instagramu&description=Nauč%20se%20organicky%20růst%20za%2030%20minut%20denně",
         width: 1200,
         height: 630,
-        alt: 'GrowMat Academy - Instagram růst kurz',
+        alt: "GrowMat Academy - Instagram růst kurz",
       },
     ],
-    locale: 'cs_CZ',
-    type: 'website',
+    locale: "cs_CZ",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'GrowMat Academy - Raketový růst na Instagramu',
-    description: 'Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky. Bez reklam, pouze 30 minut denně.',
-    images: ['/api/og?title=Raketový%20růst%20na%20Instagramu&description=Nauč%20se%20organicky%20růst%20za%2030%20minut%20denně'],
+    card: "summary_large_image",
+    title: "GrowMat Academy - Raketový růst na Instagramu",
+    description:
+      "Nauč se organicky růst na Instagramu a proměňovat sledující na zákazníky. Bez reklam, pouze 30 minut denně.",
+    images: [
+      "/api/og?title=Raketový%20růst%20na%20Instagramu&description=Nauč%20se%20organicky%20růst%20za%2030%20minut%20denně",
+    ],
   },
   robots: {
     index: true,
@@ -60,13 +76,13 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: "your-google-verification-code",
   },
 };
 
@@ -81,7 +97,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#10b981" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -89,7 +108,7 @@ export default function RootLayout({
         <ClarityInit />
         <StructuredData />
         <Navbar />
-        <main className="pt-16">{children}</main>
+        <main className="">{children}</main>
         <CookieBanner />
       </body>
     </html>

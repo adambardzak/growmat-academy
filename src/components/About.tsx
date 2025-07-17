@@ -9,6 +9,8 @@ import {
   FaInstagram,
   FaPlay,
 } from "react-icons/fa";
+import TestimonialsResults from "./TestimonialsResults";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 const About = () => {
   return (
@@ -52,19 +54,14 @@ const About = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-100">
               Jmenuji se <span className="text-green-400">Matyáš Linda</span>
             </h3>
-            <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            <p className="text-xl text-gray-300 leading-relaxed">
               a buduji na Instagramu profily, které transformují lidem životy v
               oblasti zdraví.
             </p>
-            <button className="group bg-green-400/20 hover:bg-green-400/30 text-green-400 font-semibold py-3 px-6 rounded-full transition-all duration-300 inline-flex items-center gap-2 hover:scale-105 border border-green-400/30">
-              <FaPlay className="text-sm" />
-              <span>Pusť si moji příběh</span>
-              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className=" gap-12 mb-16">
           <div className="bg-white/5 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 hover:border-green-400/30 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <FaPodcast className="text-green-400 text-2xl" />
@@ -74,7 +71,7 @@ const About = () => {
             </div>
 
             {/* Before/After Images */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            {/* <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="text-center">
                 <Image
                   src="/api/placeholder/150/150"
@@ -95,7 +92,7 @@ const About = () => {
                 />
                 <span className="text-green-400 text-sm">Teď: 500K+ views</span>
               </div>
-            </div>
+            </div> */}
 
             <p className="text-gray-300 leading-relaxed mb-4">
               Když jsem začínal s mým prvním projektem - podcast{" "}
@@ -108,35 +105,11 @@ const About = () => {
               pokus/omyl jak na svých projektech, tak i na prvních klientech,
               kteří ve mě vložili důvěru.
             </p>
-
-            <button className="group bg-transparent border border-green-400 text-green-400 font-semibold py-2 px-4 rounded-full transition-all duration-300 hover:bg-green-400 hover:text-black inline-flex items-center gap-2">
-              <span>Celý můj příběh</span>
-              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-400/10 to-green-600/5 backdrop-blur-md border border-green-400/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <FaGraduationCap className="text-green-400 text-2xl" />
               <h4 className="text-xl font-semibold text-green-400">
                 GrowMat Academy
               </h4>
-            </div>
-
-            {/* Academy Preview */}
-            <div className="relative mb-6">
-              <Image
-                src="/api/placeholder/300/180"
-                alt="GrowMat Academy Preview"
-                width={300}
-                height={180}
-                className="w-full h-32 object-cover rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
-                <button className="bg-green-400/90 text-black p-3 rounded-full hover:bg-green-400 transition-all duration-300">
-                  <FaPlay className="text-lg ml-1" />
-                </button>
-              </div>
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-4">
@@ -194,6 +167,7 @@ const About = () => {
             </p>
           </div>
         </div>
+        <TestimonialCarousel />
       </div>
     </section>
   );

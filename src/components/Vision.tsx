@@ -18,6 +18,10 @@ import {
   FaCheckCircle,
   FaQuoteLeft,
 } from "react-icons/fa";
+import QuickVideoSvg from "./svg/QuickVideoSvg";
+import SystemFrameworkSvg from "./svg/SystemFrameworkSvg";
+import EthicalSalesSvg from "./svg/EthicalSalesSvg";
+import PsychologyInsightSvg from "./svg/PsychologyInsightSvg";
 
 const features = [
   {
@@ -32,7 +36,6 @@ const features = [
       </>
     ),
     cta: "Zjisti jak na to",
-    image: "/api/placeholder/400/300",
     stats: "10x více dosahu",
     badge: "Rychlý start",
   },
@@ -47,7 +50,6 @@ const features = [
       </>
     ),
     cta: "Ukaž mi systém",
-    image: "/api/placeholder/400/300",
     stats: "30 min denně",
     badge: "Ověřený systém",
   },
@@ -62,7 +64,6 @@ const features = [
       </>
     ),
     cta: "Chci se naučit prodávat",
-    image: "/api/placeholder/400/300",
     stats: "Etické prodeje",
     badge: "Bez tlaku",
   },
@@ -78,7 +79,6 @@ const features = [
       </>
     ),
     cta: "Odhal psychologii",
-    image: "/api/placeholder/400/300",
     stats: "Psychologie úspěchu",
     badge: "Odborné znalosti",
   },
@@ -169,15 +169,14 @@ const Vision = () => {
               </div>
 
               {/* Image Section */}
-              <div className="relative mb-6 overflow-hidden rounded-xl">
-                <Image
-                  src={feature.image}
-                  alt={`Feature ${idx + 1}`}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="relative mb-6 overflow-hidden rounded-xl bg-gray-900/50">
+                <div className="w-full h-48 transition-transform duration-300 group-hover:scale-105">
+                  {idx === 0 && <QuickVideoSvg />}
+                  {idx === 1 && <SystemFrameworkSvg />}
+                  {idx === 2 && <EthicalSalesSvg />}
+                  {idx === 3 && <PsychologyInsightSvg />}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
                 <div className="absolute top-4 left-4 bg-green-400/20 backdrop-blur-sm p-2 rounded-full border border-green-400/30">
                   {feature.icon}
                 </div>
@@ -213,66 +212,6 @@ const Vision = () => {
         </div>
 
         {/* Social Proof Section */}
-        <div className="mb-16">
-          <div className="bg-white/5 backdrop-blur-md border border-green-400/20 rounded-2xl p-8 shadow-xl">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-green-400 mb-2">
-                Skutečné výsledky našich studentů
-              </h3>
-              <p className="text-gray-300">
-                Přečti si, co říkají lidé, kteří už začali růst
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.map((testimonial, idx) => (
-                <div
-                  key={idx}
-                  className="bg-black/30 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 relative"
-                >
-                  <FaQuoteLeft className="text-green-400/50 text-2xl mb-4" />
-                  <p className="text-gray-200 mb-4 italic">
-                    {testimonial.text}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src={testimonial.avatar}
-                        alt={testimonial.author}
-                        width={40}
-                        height={40}
-                        className="rounded-full"
-                      />
-                      <div>
-                        <div className="text-green-400 font-semibold">
-                          {testimonial.author}
-                        </div>
-                        <div className="text-gray-400 text-sm">
-                          Ověřený student
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-green-400/20 backdrop-blur-sm px-3 py-1 rounded-full border border-green-400/30">
-                      <span className="text-green-300 text-sm font-semibold">
-                        {testimonial.result}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <button className="bg-gradient-to-r from-green-400 to-green-600 text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:from-green-500 hover:to-green-700 hover:scale-105 shadow-lg hover:shadow-green-400/50 inline-flex items-center gap-2">
-                <FaUsers className="text-lg" />
-                <span>Přidej se k úspěšným</span>
-                <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Final CTA Section */}
         <div className="text-center">
@@ -303,26 +242,6 @@ const Vision = () => {
                 <span>Začni růst už dnes!</span>
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-
-              <button className="group bg-white/10 backdrop-blur-md border border-green-400/30 text-green-400 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:bg-green-400/20 hover:scale-105 shadow-lg inline-flex items-center gap-3">
-                <FaInstagram className="text-xl" />
-                <span>Sleduj nás na IG</span>
-              </button>
-            </div>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-300">
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-400" />
-                <span>30denní záruka</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-400" />
-                <span>Okamžitý přístup</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-400" />
-                <span>Doživotní podpora</span>
-              </div>
             </div>
           </div>
         </div>
