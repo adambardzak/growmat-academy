@@ -101,7 +101,10 @@ const testimonials = [
 
 const Vision = () => {
   return (
-    <section id="system" className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden">
+    <section
+      id="system"
+      className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden"
+    >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-400/20 rounded-full blur-2xl animate-pulse" />
@@ -141,49 +144,6 @@ const Vision = () => {
               <FaPlay className="text-sm" />
               <span>Podívej se na ukázku</span>
             </button>
-          </div>
-        </div>
-
-        {/* Hero Video/Image Section */}
-        <div className="mb-16 text-center">
-          <div className="relative inline-block">
-            <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-2 rounded-2xl border border-green-400/30">
-              <div className="relative bg-black/50 rounded-xl overflow-hidden">
-                <Image
-                  src="/api/placeholder/800/450"
-                  alt="Instagram Growth Preview"
-                  width={800}
-                  height={450}
-                  className="w-full h-auto max-w-4xl"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <button className="group bg-green-400/90 hover:bg-green-400 text-black p-6 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-green-400/50">
-                    <FaPlay className="text-3xl ml-1" />
-                  </button>
-                </div>
-
-                {/* Video Stats Overlay */}
-                <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
-                  <div className="flex items-center gap-2 text-green-400">
-                    <FaUsers className="text-sm" />
-                    <span className="text-sm font-semibold">
-                      10,000+ sledujících
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <div className="bg-green-400/20 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
-                <span className="text-green-300 font-semibold">
-                  👆 Jak to funguje v praxi
-                </span>
-              </div>
-              <button className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30 text-green-400 hover:bg-green-400/20 transition-all duration-300">
-                <span className="text-sm">Více videí</span>
-              </button>
-            </div>
           </div>
         </div>
 
