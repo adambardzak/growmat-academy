@@ -58,30 +58,30 @@ const SystemIntro = () => {
               height={400}
               className="rounded-2xl shadow-lg py-4 object-cover w-full h-full"
             />
-            <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-8 rounded-2xl border border-green-400/30 mb-8">
+            <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-4 w-full rounded-2xl border border-green-400/30 mb-8">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 bg-green-400/20 px-4 py-2 rounded-full mb-4">
-                  <span className="text-green-400 font-bold text-lg">#1</span>
-                  <span className="text-white font-semibold">
+                  <span className="text-green-400 font-bold text-xl">#1</span>
+                  <span className="text-white font-semibold text-xl">
                     ONLINE KOMUNITA
                   </span>
                 </div>
               </div>
-              <p className="text-lg md:text-xl font-bold text-white mb-4">
+              <p className="text-xl md:text-2xl font-bold text-white mb-4">
                 PRO RAKETOVÝ RŮST A PRODEJ NA INSTAGRAMU
               </p>
               <div className="grid md:grid-cols-3 gap-4 mb-6">
                 <div className="bg-black/30 p-4 rounded-xl border border-green-400/20">
                   <FaRobot className="text-green-400 text-2xl mb-2 mx-auto" />
-                  <p className="text-sm text-gray-300">Jen pomocí AI</p>
+                  <p className="text-lg text-gray-300">Jen pomocí AI</p>
                 </div>
                 <div className="bg-black/30 p-4 rounded-xl border border-green-400/20">
                   <span className="text-green-400 text-2xl mb-2 block">📱</span>
-                  <p className="text-sm text-gray-300">A telefonu</p>
+                  <p className="text-lg text-gray-300">A telefonu</p>
                 </div>
                 <div className="bg-black/30 p-4 rounded-xl border border-green-400/20">
                   <FaClock className="text-green-400 text-2xl mb-2 mx-auto" />
-                  <p className="text-sm text-gray-300">
+                  <p className="text-lg text-gray-300">
                     Za 30 minut práce denně
                   </p>
                 </div>
