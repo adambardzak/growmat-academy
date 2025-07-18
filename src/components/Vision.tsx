@@ -17,11 +17,14 @@ import {
   FaInstagram,
   FaCheckCircle,
   FaQuoteLeft,
+  FaCheck,
+  FaBrain,
 } from "react-icons/fa";
 import QuickVideoSvg from "./svg/QuickVideoSvg";
 import SystemFrameworkSvg from "./svg/SystemFrameworkSvg";
 import EthicalSalesSvg from "./svg/EthicalSalesSvg";
 import PsychologyInsightSvg from "./svg/PsychologyInsightSvg";
+import { FaArrowUpRightDots } from "react-icons/fa6";
 
 const features = [
   {
@@ -40,7 +43,7 @@ const features = [
     badge: "Rychlý start",
   },
   {
-    icon: <FaRegSmile className="text-green-400 text-3xl mb-2" />,
+    icon: <FaRegCheckCircle className="text-green-400 text-3xl mb-2" />,
     text: (
       <>
         Už se netočíš v kruhu, ale jedeš podle jasného systému, <br />
@@ -54,7 +57,7 @@ const features = [
     badge: "Ověřený systém",
   },
   {
-    icon: <FaRegCheckCircle className="text-green-400 text-3xl mb-2" />,
+    icon: <FaRegEye className="text-green-400 text-3xl mb-2" />,
     text: (
       <>
         Získáváš nejen dosahy a pozornost — ale i důvěru a prodeje, <br />
@@ -68,7 +71,7 @@ const features = [
     badge: "Bez tlaku",
   },
   {
-    icon: <FaRegEye className="text-green-400 text-3xl mb-2" />,
+    icon: <FaBrain className="text-green-400 text-3xl mb-2" />,
     text: (
       <>
         Už netvoříš &quot;naslepo&quot; — ale přesně chápeš, <br />
@@ -114,14 +117,6 @@ const Vision = () => {
       <div className="relative max-w-6xl mx-auto z-10">
         {/* Main Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-6 py-3 rounded-full border border-green-400/30 mb-6">
-            <FaStar className="text-green-400 text-xl" />
-            <span className="text-green-300 font-semibold">
-              Tvoje nová realita
-            </span>
-            <FaStar className="text-green-400 text-xl" />
-          </div>
-
           <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent shadow-lg">
               Představ si, že:
@@ -129,8 +124,15 @@ const Vision = () => {
           </h2>
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Už nejsi jen další profil v davu. Máš systém, který funguje, a
-            konečně vidíš skutečné výsledky.
+            Už nejsi jen další profil v davu. Máš{" "}
+            <span className="text-green-400 font-bold">
+              systém, který funguje,
+            </span>{" "}
+            a konečně vidíš
+            <span className="text-green-400 font-bold">
+              {" "}
+              skutečné&nbsp;výsledky.
+            </span>
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -138,11 +140,6 @@ const Vision = () => {
               <FaRocket className="text-lg" />
               <span>Začni růst ihned</span>
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-
-            <button className="group bg-white/10 backdrop-blur-md border border-green-400/30 text-green-400 font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-green-400/20 hover:scale-105 shadow-lg inline-flex items-center gap-2">
-              <FaPlay className="text-sm" />
-              <span>Podívej se na ukázku</span>
             </button>
           </div>
         </div>
@@ -177,7 +174,7 @@ const Vision = () => {
                   {idx === 3 && <PsychologyInsightSvg />}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-                <div className="absolute top-4 left-4 bg-green-400/20 backdrop-blur-sm p-2 rounded-full border border-green-400/30">
+                <div className="absolute w-12 h-12 top-4 left-4 bg-green-400/20 backdrop-blur-sm p-2 rounded-full border border-green-400/30">
                   {feature.icon}
                 </div>
 
@@ -200,11 +197,6 @@ const Vision = () => {
                     <span>{feature.cta}</span>
                     <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
-
-                  <button className="bg-white/10 backdrop-blur-md border border-green-400/30 text-green-400 font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-green-400/20 hover:scale-105 shadow-lg inline-flex items-center gap-2">
-                    <FaHeart className="text-sm" />
-                    <span>Líbí se mi</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -218,9 +210,9 @@ const Vision = () => {
           <div className="inline-block bg-gradient-to-r from-green-400/20 to-green-600/10 p-10 rounded-2xl border border-green-400/30 shadow-lg backdrop-blur-md animate-fade-in">
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 bg-green-400/30 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/40 mb-4">
-                <FaCheckCircle className="text-green-400" />
+                <FaArrowUpRightDots className="text-green-400" />
                 <span className="text-green-300 font-semibold">
-                  Záruka úspěchu
+                  Reálné výsledky
                 </span>
               </div>
             </div>

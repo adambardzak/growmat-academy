@@ -111,7 +111,7 @@ const Hero = () => {
                 </div>
 
                 {/* Social Proof Numbers */}
-                <div className="flex flex-wrap justify-center gap-8 mt-8">
+                <div className="flex flex-wrap justify-center gap-8 mt-8 md:mt-16">
                   <div className="text-center">
                     <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
                       0→+90 000

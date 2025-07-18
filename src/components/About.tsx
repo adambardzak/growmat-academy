@@ -95,10 +95,17 @@ const About = () => {
             </div> */}
 
             <p className="text-gray-300 leading-relaxed mb-4">
-              Když jsem začínal s mým prvním projektem - podcast{" "}
-              <span className="text-green-400 font-semibold">Sober Boys</span>-
-              neměl jsem absolutně tušení jak být virální, editovat videa či jak
-              se vůbec na sociálních sítích prosadit..
+              Když jsem začínal s mým prvním projektem - podcast Sober Boys -
+              neměl jsem absolutně tušení
+              <span className="text-green-400 font-bold">
+                {" "}
+                jak být virální, editovat videa
+              </span>{" "}
+              či jak se vůbec na
+              <span className="text-green-400 font-bold">
+                {" "}
+                sociálních sítích prosadit..
+              </span>
             </p>
             <p className="text-gray-300 leading-relaxed mb-6">
               Všechny dovednosti a know-how jsem tedy testoval metodou
@@ -113,9 +120,19 @@ const About = () => {
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-4">
-              Do GrowMat Academy jsem vložil veškeré své know-how prakticky a
-              provádím Tě krok za krokem od samotného založení profilu až po
-              první prodeje.
+              Do GrowMat Academy jsem vložil
+              <span className="text-green-400 font-bold">
+                {" "}
+                veškeré své know-how prakticky{" "}
+              </span>
+              a provádím Tě{" "}
+              <span className="text-green-400 font-bold">
+                krok za krokem
+              </span>{" "}
+              od samotného{" "}
+              <span className="text-green-400 font-bold">
+                založení profilu až po první prodeje.
+              </span>
             </p>
             <div className="bg-black/20 p-4 rounded-xl border-l-4 border-green-400 mb-6">
               <div className="flex items-center gap-2 mb-2">
@@ -130,7 +147,7 @@ const About = () => {
             </div>
 
             <button className="group bg-green-400 hover:bg-green-500 text-black font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-400/50 inline-flex items-center gap-2">
-              <span>Chci se připojit</span>
+              <span>Chci vědět víc!</span>
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
@@ -145,26 +162,23 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-black/30 p-6 rounded-xl border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
                 <div className="text-3xl font-bold text-green-400 mb-2">
-                  1M+
+                  15M+
                 </div>
-                <div className="text-gray-300">Celkových views</div>
+                <div className="text-gray-300">zhlédnutí</div>
               </div>
               <div className="bg-black/30 p-6 rounded-xl border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
                 <div className="text-3xl font-bold text-green-400 mb-2">
-                  500K+
+                  90K+
                 </div>
-                <div className="text-gray-300">Nových followerů</div>
+                <div className="text-gray-300">sledujících</div>
               </div>
               <div className="bg-black/30 p-6 rounded-xl border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
                 <div className="text-3xl font-bold text-green-400 mb-2">
-                  100+
+                  1M+ Kč
                 </div>
-                <div className="text-gray-300">Úspěšných klientů</div>
+                <div className="text-gray-300">v zisku pro klienty</div>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mt-6 italic">
-              [Konkrétní case studies a screenshoty výsledků budou doplněny]
-            </p>
           </div>
         </div>
         <TestimonialCarousel />

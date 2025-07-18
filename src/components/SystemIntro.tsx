@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCode, FaRobot, FaClock, FaQuestion, FaRocket } from "react-icons/fa";
+import { FaCode, FaRobot, FaClock, FaQuestion, FaRocket, FaCheck } from "react-icons/fa";
 import Image from "next/image";
 
 const SystemIntro = () => {
@@ -24,10 +24,23 @@ const SystemIntro = () => {
 
           <div className="bg-gradient-to-r from-green-400/10 to-green-600/5 p-8 rounded-2xl border border-green-400/20 backdrop-blur-sm mb-8">
             <p className="text-2xl md:text-4xl text-gray-100 mb-6 leading-relaxed font-black">
-              Teď si s klienty diktuju viralitu, prodávám na autopilota a celý
-              systém jede za 30 minut denně díky AI.
+              Teď si s klienty{" "}
+              <span className="text-green-400 font-bold">
+                diktuju viralitu, prodávám na autopilota
+              </span>{" "}
+              a celý systém jede
+              <span className="text-green-400 font-bold">
+                {" "}
+                za 30 minut denně díky AI.
+              </span>
             </p>
             <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
+                <FaCheck className="text-green-400" />
+                <span className="text-green-400 font-semibold">
+                  Ověřený systém
+                </span>
+              </div>
               <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
                 <FaRobot className="text-green-400" />
                 <span className="text-green-400 font-semibold">AI Powered</span>

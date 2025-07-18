@@ -132,7 +132,8 @@ const Navbar = () => {
           <div className="flex items-center gap-2 text-green-300 text-sm font-medium">
             <FaCheckCircle className="text-green-400" />
             <span>
-              🔥 OMEZENÁ NABÍDKA: UZAMKNI SI AKČNÍ CENU 399 Kč JEŠTĚ DNES!
+              🔥 OMEZENÁ NABÍDKA: UZAMKNI SI AKČNÍ CENU{" "}
+              <span className="text-yellow-400">399 Kč JEŠTĚ DNES!</span>
             </span>
             <button className="text-green-400 hover:text-green-300 underline ml-2 transition-colors duration-300">
               Zjisti více
