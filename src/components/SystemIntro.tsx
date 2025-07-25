@@ -212,7 +212,6 @@ const SystemIntro = () => {
                 playsInline
                 poster="/kurz_mockup.png"
               >
-                <source src="/video/obsah-compressed.webm" type="video/webm" />
                 <source src="/video/obsah-compressed.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
