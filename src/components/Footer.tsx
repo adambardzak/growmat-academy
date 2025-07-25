@@ -17,36 +17,36 @@ import StaggeredAnimate from "./animations/StaggeredAnimate";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-black via-gray-900 to-gray-800 border-t border-green-400/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16 mobile-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7 }}
-          className="grid md:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mobile-grid"
         >
           {/* Brand Section */}
           <div className="md:col-span-2">
             <AnimateIn
               direction="left"
               delay={0.2}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6"
             >
-              <div className="bg-gradient-to-r from-green-400 to-green-600 p-2 rounded-lg">
-                <FaInstagram className="text-black text-xl" />
+              <div className="bg-gradient-to-r from-green-400 to-green-600 p-1.5 sm:p-2 rounded-lg">
+                <FaInstagram className="text-black text-lg sm:text-xl" />
               </div>
               <div>
-                <div className="text-white font-bold text-xl">
+                <div className="text-white font-bold text-lg sm:text-xl">
                   GrowMat Academy
                 </div>
-                <div className="text-green-400 text-sm font-semibold">
+                <div className="text-green-400 text-xs sm:text-sm font-semibold">
                   Raketový růst na Instagramu
                 </div>
               </div>
             </AnimateIn>
 
             <AnimateIn direction="up" delay={0.3} className="block">
-              <p className="text-gray-300 mb-6 max-w-md">
+              <p className="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base mobile-text">
                 Nauč se organicky růst na Instagramu a proměňovat sledující na
                 zákazníky s naším prověřeným systémem. Bez reklam, pouze 30
                 minut denně.

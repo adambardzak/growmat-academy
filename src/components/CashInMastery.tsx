@@ -133,7 +133,7 @@ const CashInMastery = () => {
 
   return (
     <section
-      className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden mobile-py"
       id="cash-in"
     >
       {/* Background decorative elements */}
@@ -143,26 +143,26 @@ const CashInMastery = () => {
         <div className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-green-400/5 to-transparent rounded-full animate-pulse" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto z-10">
+      <div className="relative max-w-6xl mx-auto z-10 mobile-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16 items-center flex flex-col justify-center"
+          className="text-center mb-10 sm:mb-12 md:mb-16 items-center flex flex-col justify-center"
         >
           <AnimateIn direction="down" duration={0.5} className="block">
-            <div className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-6 py-3 rounded-full border border-green-400/30 mb-6">
-              <FaGraduationCap className="text-green-400 text-xl" />
-              <span className="text-green-300 font-semibold">
+            <div className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-green-400/30 mb-4 sm:mb-6">
+              <FaGraduationCap className="text-green-400 text-lg sm:text-xl" />
+              <span className="text-green-300 font-semibold text-sm sm:text-base">
                 Exkluzivní kurz
               </span>
-              <FaGraduationCap className="text-green-400 text-xl" />
+              <FaGraduationCap className="text-green-400 text-lg sm:text-xl" />
             </div>
           </AnimateIn>
 
           <AnimateIn direction="up" delay={0.2} className="block">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight drop-shadow-lg mobile-heading-1">
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent shadow-lg">
                 CASH-IN Mastery
               </span>

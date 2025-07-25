@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 
 const AdditionalModules = () => {
   return (
-    <section className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden mobile-py">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse" />
@@ -25,28 +25,28 @@ const AdditionalModules = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-green-400/5 to-transparent rounded-full animate-pulse" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto z-10">
+      <div className="relative max-w-6xl mx-auto z-10 mobile-container">
         {/* Section Header */}
         <AnimateIn direction="up" duration={0.7} delay={0.1}>
-          <div className="text-center mb-16 items-center flex flex-col justify-center">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 items-center flex flex-col justify-center">
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-6 py-3 rounded-full border border-green-400/30 mb-6"
+              className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-green-400/30 mb-4 sm:mb-6"
             >
-              <FaStar className="text-green-400 text-xl" />
+              <FaStar className="text-green-400 text-lg sm:text-xl" />
               <span className="text-green-300 font-semibold">
                 Prémiový obsah
               </span>
-              <FaStar className="text-green-400 text-xl" />
+              <FaStar className="text-green-400 text-lg sm:text-xl" />
             </motion.div>
 
             <motion.h2
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight drop-shadow-lg mobile-heading-1"
             >
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent shadow-lg">
                 Bonusové moduly
@@ -57,7 +57,7 @@ const AdditionalModules = () => {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="text-xl text-gray-300 mb-8 max-w-3xl"
+              className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mobile-text"
             >
               Rozšiř své znalosti a <b>zrychli růst</b> díky těmto
               specializovaným modulům
@@ -66,62 +66,62 @@ const AdditionalModules = () => {
         </AnimateIn>
 
         {/* First row of modules */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 mobile-grid">
           {/* Faceless Masterclass */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="group bg-white/5 backdrop-blur-md border border-green-400/20 shadow-xl rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-green-400/30 hover:border-green-400/40"
+            className="group bg-white/5 backdrop-blur-md border border-green-400/20 shadow-xl rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-green-400/30 hover:border-green-400/40 mobile-card"
           >
             {/* Module badge */}
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-green-400/20 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
-                <span className="text-green-300 text-sm font-semibold">
+            <div className="flex justify-between items-start mb-4 sm:mb-6">
+              <div className="bg-green-400/20 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-green-400/30">
+                <span className="text-green-300 text-xs sm:text-sm font-semibold">
                   Premium modul
                 </span>
               </div>
-              <div className="h-10 w-10 rounded-full bg-green-400/20 flex items-center justify-center">
-                <FaUserNinja className="text-green-400 text-xl" />
+              <div className="h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-green-400/20 flex items-center justify-center">
+                <FaUserNinja className="text-green-400 text-lg sm:text-xl" />
               </div>
             </div>
 
             {/* Image section */}
-            <div className="relative mb-6 overflow-hidden rounded-xl">
+            <div className="relative mb-4 sm:mb-6 overflow-hidden rounded-xl">
               <div className="aspect-w-16 aspect-h-9 relative">
                 <Image
                   src="/faceless.png"
                   alt="Faceless Masterclass"
                   width={500}
                   height={280}
-                  className="w-full h-48 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-36 sm:h-48 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105 responsive-media"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                  <div className="w-8 h-8 bg-green-400/80 rounded-full flex items-center justify-center">
-                    <FaPlay className="text-black" />
+                <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 flex items-center gap-2">
+                  <div className="w-6 sm:w-8 h-6 sm:h-8 bg-green-400/80 rounded-full flex items-center justify-center">
+                    <FaPlay className="text-black text-xs sm:text-sm" />
                   </div>
-                  <span className="text-white font-semibold text-sm">
+                  <span className="text-white font-semibold text-xs sm:text-sm">
                     10 video lekcí
                   </span>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent mobile-heading-2">
               Faceless Masterclass
             </h3>
 
-            <p className="text-gray-300 mb-6 font-medium">
+            <p className="text-gray-300 mb-4 sm:mb-6 font-medium text-sm sm:text-base mobile-text">
               Kompletní blueprint{" "}
               <b>Jak začít tvořit a vydělávat na IG bez ukazování obličeje.</b>
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-start bg-black/30 backdrop-blur-sm p-3 rounded-lg border-l-2 border-green-400/40 hover:border-green-400 transition-all duration-300">
-                <span className="text-green-400 mr-3 mt-0.5">
-                  <FaStar className="text-green-400" />
+            <div className="space-y-3 sm:space-y-4 mobile-stack">
+              <div className="flex items-start bg-black/30 backdrop-blur-sm p-2 sm:p-3 rounded-lg border-l-2 border-green-400/40 hover:border-green-400 transition-all duration-300">
+                <span className="text-green-400 mr-2 sm:mr-3 mt-0.5">
+                  <FaStar className="text-green-400 text-sm sm:text-base" />
                 </span>
                 <span className="text-gray-200">
                   <b>1000+ virálních klipů</b> jako bonus

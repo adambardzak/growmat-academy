@@ -15,29 +15,29 @@ import StaggeredAnimate from "./animations/StaggeredAnimate";
 
 const FinalCTA = () => {
   return (
-    <section className="relative bg-gradient-to-br from-black via-gray-900 to-green-950 text-white py-24 px-4 overflow-hidden" id="pricing">
+    <section className="relative bg-gradient-to-br from-black via-gray-900 to-green-950 text-white py-16 sm:py-20 md:py-24 px-4 overflow-hidden mobile-py" id="pricing">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-green-400/15 rounded-full blur-2xl animate-pulse" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto text-center z-10">
+      <div className="relative max-w-5xl mx-auto text-center z-10 mobile-container">
         <div 
-          className="bg-gradient-to-br from-green-400/20 to-green-600/10 backdrop-blur-md p-16 rounded-3xl border-2 border-green-400/30 shadow-2xl"
+          className="bg-gradient-to-br from-green-400/20 to-green-600/10 backdrop-blur-md p-6 sm:p-10 md:p-16 rounded-2xl sm:rounded-3xl border-2 border-green-400/30 shadow-2xl mobile-card"
         >
-          <AnimateIn direction="down" delay={0.1} className="flex items-center justify-center gap-3 mb-8">
-            <FaCrown className="text-green-400 text-4xl" />
-            <h2 className="text-4xl md:text-6xl font-extrabold">
+          <AnimateIn direction="down" delay={0.1} className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <FaCrown className="text-green-400 text-3xl sm:text-4xl" />
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mobile-heading-1">
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
                 Přidej se teď
               </span>
             </h2>
           </AnimateIn>
 
-          <AnimateIn direction="up" delay={0.2} className="flex items-center justify-center gap-2 mb-8">
-            <FaLock className="text-green-400 text-xl" />
-            <p className="text-xl md:text-2xl text-gray-100 font-semibold">
+          <AnimateIn direction="up" delay={0.2} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 mb-6 sm:mb-8">
+            <FaLock className="text-green-400 text-lg sm:text-xl" />
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 font-semibold mobile-text">
               a uzamkni si prémiovou cenu NAVŽDY!
             </p>
           </AnimateIn>

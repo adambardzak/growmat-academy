@@ -20,7 +20,7 @@ const TestimonialsResults = () => {
   return (
     <div
       id="results"
-      className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-br from-black via-gray-900 to-green-950 overflow-hidden mobile-py"
       data-section="community"
     >
       {/* Background decorative elements */}
@@ -30,31 +30,31 @@ const TestimonialsResults = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-green-400/5 to-transparent rounded-full animate-pulse" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto z-10">
+      <div className="relative max-w-6xl mx-auto z-10 mobile-container">
         {/* Results Section */}
         <section
           id="results"
-          className="text-center mb-16 items-center flex flex-col justify-center"
+          className="text-center mb-10 sm:mb-12 md:mb-16 items-center flex flex-col justify-center"
         >
           <AnimateIn direction="up" duration={0.7} delay={0.1}>
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-6 py-3 rounded-full border border-green-400/30 mb-6"
+              className="inline-flex items-center gap-2 bg-green-400/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-green-400/30 mb-4 sm:mb-6"
             >
-              <FaTrophy className="text-green-400 text-xl" />
-              <span className="text-green-300 font-semibold">
+              <FaTrophy className="text-green-400 text-lg sm:text-xl" />
+              <span className="text-green-300 font-semibold text-sm sm:text-base">
                 Důkazy místo slibů
               </span>
-              <FaTrophy className="text-green-400 text-xl" />
+              <FaTrophy className="text-green-400 text-lg sm:text-xl" />
             </motion.div>
 
             <motion.h2
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight drop-shadow-lg mobile-heading-1"
             >
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent shadow-lg">
                 Výsledky členů

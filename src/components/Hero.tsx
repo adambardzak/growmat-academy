@@ -43,16 +43,16 @@ const Hero = () => {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex justify-center items-center gap-3 mb-6"
+            className="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6"
           >
             <FaInstagram className="text-green-400 text-3xl" />
-            <p className="text-green-400 text-lg font-semibold bg-green-400/10 px-4 py-2 rounded-full border border-green-400/20">
+            <p className="text-green-400 text-sm sm:text-lg font-semibold bg-green-400/10 px-4 py-2 rounded-full border border-green-400/20 mt-2 sm:mt-0">
               Pro začínající podnikatele a tvůrce na Instagramu
             </p>
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight px-2 sm:px-0"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -125,12 +125,12 @@ const Hero = () => {
           {/* Main Selling Video */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-4 rounded-3xl border border-green-400/30 backdrop-blur-sm shadow-2xl">
-                <div className="relative bg-black/60 rounded-2xl overflow-hidden">
+              <div className="bg-gradient-to-r from-green-400/20 to-green-600/10 p-2 sm:p-4 rounded-3xl border border-green-400/30 backdrop-blur-sm shadow-2xl">
+                <div className="relative bg-black/60 rounded-xl sm:rounded-2xl overflow-hidden">
                   <video
                     ref={videoRef}
                     className="w-full h-auto"
-                    poster="/kurz_mockup.png"
+                    poster="/video1.png"
                     controls
                     preload="metadata"
                     playsInline
@@ -157,26 +157,26 @@ const Hero = () => {
                 </div>
 
                 {/* Social Proof Numbers */}
-                <div className="flex flex-wrap justify-center gap-8 mt-8 md:mt-16">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-8 md:mt-16">
                   <div className="text-center">
-                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
                       0→+90 000
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-xs sm:text-sm text-gray-400 mt-1">
                       Získaných sledujících
                     </p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
                       +1000%
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">Nárůst dosahu</p>
+                    <p className="text-xs sm:text-sm text-gray-400 mt-1">Nárůst dosahu</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
                       +15 000 000
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-xs sm:text-sm text-gray-400 mt-1">
                       Zhlédnutí Reels
                     </p>
                   </div>
@@ -186,9 +186,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-3xl p-8 mb-8 border border-gray-700/50 shadow-2xl">
-          <h2 className="text-3xl font-bold mb-8 text-green-400 flex items-center justify-center gap-3">
-            <span className="text-4xl">🤔</span>
+        <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-3xl p-4 sm:p-8 mb-8 border border-gray-700/50 shadow-2xl">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-green-400 flex items-center justify-center gap-2 sm:gap-3">
+            <span className="text-3xl sm:text-4xl">🤔</span>
             Nech mě hádat…
           </h2>
           <div className="grid md:grid-cols-2 gap-8 text-left">
