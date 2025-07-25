@@ -14,7 +14,7 @@ import Aurora from "./Aurora";
 import AnimateIn from "./animations/AnimateIn";
 import StaggeredAnimate from "./animations/StaggeredAnimate";
 import { motion } from "framer-motion";
-import { getVideoUrl } from "../utils/videoUtils";
+// import { getVideoUrl } from "../utils/videoUtils";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -135,10 +135,7 @@ const Hero = () => {
                     preload="metadata"
                     playsInline
                   >
-                    <source
-                      src={getVideoUrl("/video/hero-compressed.mp4")}
-                      type="video/mp4"
-                    />
+                    <source src="/video/hero-compressed.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 

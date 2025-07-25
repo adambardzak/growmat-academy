@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {
   FaRobot,
@@ -11,7 +9,6 @@ import {
 import Image from "next/image";
 import AnimateIn from "./animations/AnimateIn";
 import StaggeredAnimate from "./animations/StaggeredAnimate";
-import { getVideoUrl } from "../utils/videoUtils";
 
 const SystemIntro = () => {
   return (
@@ -213,7 +210,7 @@ const SystemIntro = () => {
                 playsInline
                 poster="/kurz_mockup.png"
               >
-                <source src={getVideoUrl("/video/obsah-compressed.mp4")} type="video/mp4" />
+                <source src="/video/obsah-compressed.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </AnimateIn>
