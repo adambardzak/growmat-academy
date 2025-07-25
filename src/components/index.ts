@@ -1,0 +1,12 @@
+export { default as Hero } from './Hero';
+export { default as Vision } from './Vision';
+export { default as About } from './About';
+export { default as SystemIntro } from './SystemIntro';
+export { default as CourseContent } from './CourseContent';
+export { default as CashInMastery } from './CashInMastery';
+export { default as AdditionalModules } from './AdditionalModules';
+export { default as TestimonialsResults } from './TestimonialsResults';
+export { default as PricingCTA } from './PricingCTA';
+export { default as FAQ } from './FAQ';
+export { default as FinalCTA } from './FinalCTA';
+export { default as Footer } from './Footer';
