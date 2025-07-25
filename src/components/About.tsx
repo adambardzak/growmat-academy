@@ -9,10 +9,7 @@ import {
   FaGraduationCap,
   FaArrowRight,
   FaInstagram,
-  FaPlay,
 } from "react-icons/fa";
-import TestimonialsResults from "./TestimonialsResults";
-import TestimonialCarousel from "./TestimonialCarousel";
 import { motion } from "framer-motion";
 import AnimateIn from "./animations/AnimateIn";
 import StaggeredAnimate from "./animations/StaggeredAnimate";
