@@ -170,7 +170,9 @@ const Hero = () => {
                     <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
                       +1000%
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-400 mt-1">Nárůst dosahu</p>
+                    <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                      Nárůst dosahu
+                    </p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">

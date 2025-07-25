@@ -66,7 +66,7 @@ const AdditionalModules = () => {
         </AnimateIn>
 
         {/* First row of modules */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 mobile-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
           {/* Faceless Masterclass */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
